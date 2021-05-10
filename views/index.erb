@@ -1,0 +1,17 @@
+  <% if @cat_name %>
+  <h1>
+  My name is <%=@cat_name%>
+  </h1>
+  <% end %>
+
+  "<div style='border: 6px dashed purple'>
+  <img src='https://i.imgur.com/jFaSxym.png'>
+  </div>"
+
+<% if !@cat_name %>
+<form action="/named-cat">
+<label for="cat_name">Name:</label><br>
+<input type="text" name="cat_name"><br>
+<input type="submit" value="Submit"><br>
+</form>
+<% end %>
